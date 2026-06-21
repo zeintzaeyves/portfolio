@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Zein Khalid — Portfolio",
   description:
     "Frontend Developer and UI/UX Web Designer based in the Philippines.",
+  icons: {
+    icon: "/images/profile.png",
+    shortcut: "/images/profile.png",
+    apple: "/images/profile.png",
+  },
 };
 
 export default function RootLayout({
