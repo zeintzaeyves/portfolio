@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { SiteHeader } from "@/components/siteheader";
 
 const biographyParagraphs = [
   "I'm Zein Khalid Bulaclac, a freelance UI/UX web designer and front-end developer based in the Philippines. Since 2024, I've been working on thesis and side projects, helping clients turn their ideas into reality through clean design and functional web experiences. My work focuses on crafting intuitive interfaces and building responsive, modern websites that prioritize usability and performance.",
@@ -95,30 +95,10 @@ const gallery = [
 export default function BiographyPage() {
   return (
     <main className="min-h-screen bg-[#f3f3f1] px-6 py-8 text-[#151515] md:px-10 lg:px-[70px]">
-      <header className="grid grid-cols-3 items-start">
-        <Link
-          href="/"
-          className="w-fit text-[14px] font-normal leading-none tracking-[-0.04em] text-black"
-        >
-          Home
-        </Link>
+      <SiteHeader />
 
-        <Link
-          href="/"
-          className="justify-self-center text-[14px] font-bold leading-none tracking-[-0.045em] text-black"
-        >
-          zeinkhalid.
-        </Link>
-
-        <a
-          href="mailto:bulaclaczeinkhalidjornadal@gmail.com"
-          className="justify-self-end border-b border-black text-[14px] font-normal leading-none tracking-[-0.04em] text-black"
-        >
-          let&apos;s connect
-        </a>
-      </header>
-
-      <section className="mt-28 grid grid-cols-12 gap-6 md:mt-36 lg:mt-44">
+      {/* ↓ Changed from mt-28 md:mt-36 lg:mt-44 → mt-14 md:mt-20 lg:mt-24 */}
+      <section className="mt-14 grid grid-cols-12 gap-6 md:mt-20 lg:mt-24">
         <div className="col-span-12 md:col-span-4">
           <p className="max-w-[300px] text-[15px] font-normal leading-[1.1] tracking-[-0.045em] text-black/50">
             How Design and Technology Shaped My Career
@@ -252,7 +232,6 @@ export default function BiographyPage() {
           ))}
         </div>
       </section>
-      
     </main>
   );
 }
