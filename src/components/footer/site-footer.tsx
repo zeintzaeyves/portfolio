@@ -1,9 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navigation = [
   { label: "Home", href: "/#home" },
   { label: "Biography", href: "/biography" },
-  { label: "Case Studies", href: "/#projects" },
+  { label: "Projects", href: "/projects" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const socials = [
@@ -48,8 +50,26 @@ export function SiteFooter() {
   return (
     <footer
       id="contacts"
-      className="w-full overflow-hidden bg-[#f3f3f1] px-6 pb-8 pt-10 text-[#151515] md:px-8 md:pt-12 lg:px-10 lg:pt-14"
+      className="w-full overflow-hidden bg-[#f3f3f1] px-6 pb-8 pt-8 text-[#151515] md:px-8 md:pt-10 lg:px-10 lg:pt-12"
     >
+      <div className="relative mb-14 h-[340px] w-full overflow-hidden rounded-[28px] md:mb-16 md:h-[430px] lg:h-[500px] lg:rounded-[34px]">
+        <Image
+          src="/images/archi.png"
+          alt="Architecture background"
+          fill
+          sizes="100vw"
+          className="object-cover brightness-[0.55]"
+        />
+
+        <div className="absolute inset-0 bg-black/45" />
+
+        <div className="relative z-10 flex h-full items-center justify-center px-6 text-center">
+          <h2 className="text-[18px] font-bold leading-none tracking-[-0.045em] text-white md:text-[24px] lg:text-[30px]">
+            Design is learned. Empathy is felt.
+          </h2>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 gap-14 md:grid-cols-12 md:gap-8">
         <div className="md:col-span-6 lg:col-span-5">
           <h2 className="max-w-[560px] text-[28px] font-bold leading-[1.02] tracking-[-0.065em] sm:text-[34px] md:text-[38px] lg:text-[44px]">

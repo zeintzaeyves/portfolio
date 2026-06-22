@@ -15,7 +15,7 @@ const navItems = [
   {
     label: "Projects",
     mobileLabel: "Projects",
-    href: "/#projects",
+    href: "/projects",
     id: "projects",
     sectionId: "projects",
   },
@@ -64,9 +64,10 @@ export function SiteHeader() {
   const [homeActiveSection, setHomeActiveSection] = useState("home");
 
   const activeSection = useMemo(() => {
+    if (pathname === "/projects") return "projects";
+    if (pathname.startsWith("/case-studies")) return "projects";
     if (pathname === "/biography") return "biography";
     if (pathname === "/contact") return "contact";
-    if (pathname.startsWith("/case-studies")) return "projects";
     if (pathname === "/") return homeActiveSection;
 
     return "";

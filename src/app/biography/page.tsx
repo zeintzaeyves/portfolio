@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SiteHeader } from "@/components/siteheader";
+import { SiteFooter } from "@/components/footer/site-footer";
 
 const biographyParagraphs = [
   "I'm Zein Khalid Bulaclac, a freelance UI/UX web designer and front-end developer based in the Philippines. Since 2024, I've been working on thesis and side projects, helping clients turn their ideas into reality through clean design and functional web experiences. My work focuses on crafting intuitive interfaces and building responsive, modern websites that prioritize usability and performance.",
@@ -94,7 +95,7 @@ const gallery = [
 
 export default function BiographyPage() {
   return (
-    <main className="min-h-screen bg-[#f3f3f1] px-6 pb-16 pt-6 text-[#151515] md:px-8 lg:px-10">
+    <main className="min-h-screen bg-[#f3f3f1] px-6 pb-0 pt-6 text-[#151515] md:px-8 lg:px-10">
       <SiteHeader />
 
       <section className="mt-16 grid grid-cols-12 gap-6 md:mt-24 lg:mt-28">
@@ -231,6 +232,10 @@ export default function BiographyPage() {
           ))}
         </div>
       </section>
+
+      <div className="-mx-6 mt-20 md:-mx-8 lg:-mx-10">
+        <SiteFooter />
+      </div>
     </main>
   );
 }

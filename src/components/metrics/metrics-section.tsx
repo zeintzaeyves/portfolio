@@ -82,7 +82,7 @@ export function MetricsSection() {
             <span>62% Progress</span>
 
             <Link
-              href="#projects"
+              href="/projects"
               className="transition-colors hover:text-black"
             >
               View More
