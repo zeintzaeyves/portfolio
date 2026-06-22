@@ -94,11 +94,10 @@ const gallery = [
 
 export default function BiographyPage() {
   return (
-    <main className="min-h-screen bg-[#f3f3f1] px-6 py-8 text-[#151515] md:px-10 lg:px-[70px]">
+    <main className="min-h-screen bg-[#f3f3f1] px-6 pb-16 pt-6 text-[#151515] md:px-8 lg:px-10">
       <SiteHeader />
 
-      {/* ↓ Changed from mt-28 md:mt-36 lg:mt-44 → mt-14 md:mt-20 lg:mt-24 */}
-      <section className="mt-14 grid grid-cols-12 gap-6 md:mt-20 lg:mt-24">
+      <section className="mt-16 grid grid-cols-12 gap-6 md:mt-24 lg:mt-28">
         <div className="col-span-12 md:col-span-4">
           <p className="max-w-[300px] text-[15px] font-normal leading-[1.1] tracking-[-0.045em] text-black/50">
             How Design and Technology Shaped My Career
